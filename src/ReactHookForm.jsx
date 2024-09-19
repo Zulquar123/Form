@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 
 export default function ReactHookForm() {
   const { register, handleSubmit } = useForm();
+
   const sty = "border-2 border-blue-500 rounded m-1 p-1 ";
 
   return (
