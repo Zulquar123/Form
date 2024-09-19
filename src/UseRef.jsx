@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 
 export default function UseRef() {
-  const sty = "border-2 border-blue-500 rounded m-1 px-1";
+  const sty = "border-2 border-blue-500 rounded m-1";
   const name = useRef(null);
   const age = useRef(null);
   const email = useRef(null);
