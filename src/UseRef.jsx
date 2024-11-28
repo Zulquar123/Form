@@ -34,10 +34,10 @@ export default function UseRef() {
           Submit
         </button>
       </form>
-      {/* <div>
+     
        
-        {"name : " + inputname + " \n " + "password : " + inputpassword}   will not work because there is no state
-      </div> */}
+        {/* {"name : " + inputname + " \n " + "password : " + inputpassword}   will not work because there is no state */}
+     
     </div>
   );
 }
