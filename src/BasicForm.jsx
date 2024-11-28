@@ -33,6 +33,7 @@ export default function BasicForm() {
           Submit
         </button>
       </form>
+      {/* <div>{`Name : ${name} and Password : ${password}`}</div> Not work because state should be defined. */}
     </div>
   );
 }
