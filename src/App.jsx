@@ -1,18 +1,19 @@
-// import UseRef from "./UseRef";
+// import BasicForm from "./BasicForm";
+// import BasicFormState from "./BasicFormState";
 // import Controlledcompo from "./Controlledcompo";
 // import ReactHookForm from "./ReactHookForm";
-import BasicForm from "./BasicForm";
-//import BasicFormState from "./BasicFormState";
+
+import UseRef from "./UseRef";
 
 export default function App() {
   return (
     <div>
-      <BasicForm />
+      {/* <BasicForm /> */}
       {/* <BasicFormState /> */}
 
-      {/* <UseRef />
-      <Controlledcompo />
-      <ReactHookForm /> */}
+      <UseRef />
+      {/* <Controlledcompo />
+      <ReactHookForm />  */}
     </div>
   );
 }
