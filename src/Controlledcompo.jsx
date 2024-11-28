@@ -1,28 +1,38 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Controlledcompo() {
-  const sty = "border-2 rounded border-blue-500 m-1 p-1";
   const [val, setVal] = useState({ name: "" });
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-  const onChange = (event) => {
+
+  const onChangeInput = (event) => {
     setVal({ name: event.target.value });
     console.log(val);
+    console.log(val.name);
   };
+
+  const handleSubmitBtn = (event) => {
+    event.preventDefault();
+    event.target.reset();
+  };
+
   return (
-    <div className="m-10">
-      <form action="" onSubmit={handleSubmit}>
+    <div className="flex flex-col gap-5 justify-center items-center mt-20 border-2 border-sky-600 w-[30%] m-auto p-10">
+      <h1 className="font-bold text-3xl text-sky-600">Fill the form</h1>
+      <form
+        action=""
+        className="flex flex-col gap-3 "
+        onSubmit={handleSubmitBtn}
+      >
         <input
-          onChange={onChange}
           type="text"
-          placeholder="Name"
-          className={sty}
+          className="border-2 border-sky-600"
+          onChange={onChangeInput}
         />
-        {/* <input type="text" placeholder="Address" className={sty} />
-        <input type="text" placeholder="Email" className={sty} /> */}
-        <input type="submit" className={sty} />
+
+        <button type="Submit" className="border-2 border-sky-600">
+          Submit
+        </button>
       </form>
+      {"Name : " + val.name}
     </div>
   );
 }
