@@ -1,14 +1,14 @@
 import { useForm } from "react-hook-form";
 
 export default function ReactHookForm() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const sty = "border-2 border-blue-500 rounded m-1 p-1 ";
 
-  const submit = (data, event) => {
+  const submit = (data) => {
     console.log(data);
     console.log(data.name, data.address);
-    event.target.reset();
+    reset();
   };
   return (
     <div className="m-10">
