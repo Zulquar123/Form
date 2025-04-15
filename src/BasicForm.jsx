@@ -1,10 +1,13 @@
 export default function BasicForm() {
+
+
   const handleSubmitBtn = (event) => {
     event.preventDefault();
-    const name = event.target.name.value;
-    const password = event.target.password.value;
-    console.log(name, password);
-    event.target.reset();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    console.log(name, email);
+    form.reset();
   };
 
   return (
@@ -23,8 +26,8 @@ export default function BasicForm() {
           required
         />
         <input
-          type="password"
-          name="password"
+          type="email"
+          name="email"
           id=""
           className="border-2 border-sky-600"
           required
@@ -33,7 +36,7 @@ export default function BasicForm() {
           Submit
         </button>
       </form>
-      {/* <div>{`Name : ${name} and Password : ${password}`}</div> Not work because state should be defined. */}
+      {/* <div>{`Name : ${name} and Email : ${email}`}</div> Not work because state should be defined. */}
     </div>
   );
 }
